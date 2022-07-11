@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Base</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <center><h1>My Daily Checklist</h1></center>
+
+    <form action="/insert" method="post">
+      <input type="text" name="c_name" />
+      <button type="submit">Add</button>
+    </form>
+  Task Added: {{c_name}}
+
+     <center><h1>Added Task</h1></center>
+      {% for i in my_list %}
+      {{ i.c_id }} | {{ i.c_name }}<br><a href="/delete/{{i.c_id}}"> Delete</a><br>
+    {% endfor %}
+
+  </body>
+</html>
